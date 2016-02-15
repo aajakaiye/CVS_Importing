@@ -118,15 +118,11 @@ public class CSVFileParser {
         courseWriter.close();
         enrollmentWriter.flush();
         enrollmentWriter.close();
-
-
-
     }
 
     public void studentProcessor(BufferedWriter bw, String userID, String userName, String state) throws IOException{
         bw.write(userID + "," + userName + "," + state);
         bw.newLine();
-
     }
 
     public void courseProcessor(BufferedWriter bw, String courseId, String courseName, String state) throws IOException{
@@ -150,10 +146,7 @@ public class CSVFileParser {
         outputFile.createNewFile();
         FileWriter fw = new FileWriter(outputFile.getAbsoluteFile());
         BufferedWriter bw = new BufferedWriter(fw);
-        return bw;
-
+	return bw;
     }
-
-
 
 }
